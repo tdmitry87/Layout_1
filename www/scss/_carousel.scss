@@ -1,0 +1,47 @@
+
+.carousel {
+    width: 100%;
+    min-width: 1140px;
+    background-color: #aff;
+    padding: 0 45px;
+
+    &__content {
+        overflow: hidden;  //
+        background-color: #faf;
+    }
+
+    &__list {
+        position: relative;
+        left: 0px;
+        display: block;
+        width: 99999px;
+        overflow: hidden;
+        
+    }
+
+    &__item {
+        display: inline-block;
+        margin: 0 15px;
+
+        overflow: hidden;
+        width: calc(100vw/3 - 60px);
+        //width: 50px;
+        min-width: 100px;  //расчитать реальный
+
+    }
+
+    @media all and (max-width: 1140px) {
+        &__item {
+            width: 320px;
+        }
+    }
+
+    &__photo {
+        width: 100%;
+        
+        //width: 50px;
+        display: block;
+        height: auto;
+    }
+
+}
