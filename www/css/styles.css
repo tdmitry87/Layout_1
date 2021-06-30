@@ -52,12 +52,17 @@ ul, ol {
   margin: 0;
 }
 
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
 /*------------------------------------------------------------
 HEADER
 --------------------------------------------------------------*/
 .header {
   display: grid;
-  grid-template-columns: minmax(160px, 1fr) auto minmax(160px, 1fr);
+  grid-template-columns: minmax(160px, 1fr) minmax(max-content, auto) minmax(160px, 1fr);
   grid-template-rows: auto;
   color: #000000;
   grid-template-areas: "header__logo header__menu header__menu-icon";
@@ -149,5 +154,48 @@ HEADER
 
 .header__menu-icon-line:last-of-type {
   margin-bottom: 4px;
+}
+
+/*-------------------------------------------------------------------------
+PLAIN CAROUSEL
+-------------------------------------------------------------------------*/
+.carousel {
+  width: 100%;
+  min-width: 1140px;
+  background-color: #aff;
+  padding: 0 45px;
+}
+
+.carousel__content {
+  overflow: hidden;
+  background-color: #faf;
+}
+
+.carousel__list {
+  position: relative;
+  left: 0px;
+  display: block;
+  width: 99999px;
+  overflow: hidden;
+}
+
+.carousel__item {
+  display: inline-block;
+  margin: 0 15px;
+  overflow: hidden;
+  width: calc(100vw/3 - 60px);
+  min-width: 100px;
+}
+
+@media all and (max-width: 1140px) {
+  .carousel__item {
+    width: 320px;
+  }
+}
+
+.carousel__photo {
+  width: 100%;
+  display: block;
+  height: auto;
 }
 /*# sourceMappingURL=styles.css.map */

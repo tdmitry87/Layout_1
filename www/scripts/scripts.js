@@ -1,0 +1,27 @@
+window.onload = function () {
+
+    /*--------------------------------------------------------
+    Корректировка ширины элементов карусели
+    
+    Работает при видимой ширине экрана не менее 1140px, далее надо менять представление в медиа
+    --------------------------------------------------------*/
+    var carousel__items = document.querySelectorAll(".carousel__item");
+
+    //alert(carousel__items.length); 
+    function changeCarouselItemWidth () {
+        if (document.documentElement.clientWidth >= 1140) {
+            for (var i = 0, n = carousel__items.length; i < n; i++) {
+                carousel__items[i].style.width = document.documentElement.clientWidth / 3 - 60 + "px";
+            }
+        }
+        else {
+            for (var i = 0, n = carousel__items.length; i < n; i++) {
+                carousel__items[i].style.width = "320px";
+            }
+        }
+    }
+    changeCarouselItemWidth();
+
+    window.onresize = changeCarouselItemWidth;
+}
+ 
