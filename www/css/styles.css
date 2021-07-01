@@ -143,6 +143,10 @@ HEADER
   height: 29px;
 }
 
+.header__menu-icon-container:hover {
+  cursor: pointer;
+}
+
 .header__menu-icon-line {
   border-bottom: 1px solid #000;
   margin-bottom: 9px;
@@ -162,21 +166,20 @@ PLAIN CAROUSEL
 .carousel {
   width: 100%;
   min-width: 1140px;
-  background-color: #aff;
   padding: 0 45px;
 }
 
 .carousel__content {
   overflow: hidden;
-  background-color: #faf;
+  position: relative;
 }
 
 .carousel__list {
-  position: relative;
   left: 0px;
   display: block;
   width: 99999px;
   overflow: hidden;
+  line-height: 0;
 }
 
 .carousel__item {
@@ -184,7 +187,8 @@ PLAIN CAROUSEL
   margin: 0 15px;
   overflow: hidden;
   width: calc(100vw/3 - 60px);
-  min-width: 100px;
+  min-width: 320px;
+  position: relative;
 }
 
 @media all and (max-width: 1140px) {
@@ -197,5 +201,76 @@ PLAIN CAROUSEL
   width: 100%;
   display: block;
   height: auto;
+}
+
+.carousel__description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 166px;
+  padding: 20px 15px;
+  background-color: rgba(209, 169, 84, 0.9);
+}
+
+.carousel__description-content {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  color: #fff;
+  font-weight: 400;
+}
+
+.carousel__content-header {
+  font-size: 30px;
+  text-align: center;
+}
+
+.carousel__content-text {
+  font-size: 14px;
+  line-height: 1.35;
+  text-align: center;
+  margin: 0;
+}
+
+.carousel__content-text:last-of-type {
+  margin-bottom: 22px;
+}
+
+.carousel__control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 60.1px 0 120.5px;
+}
+
+.carousel__control-panel {
+  width: 172px;
+  height: 8.5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel__control-panel img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+.carousel__control-bar {
+  width: 144px;
+  position: relative;
+}
+
+.carousel__position-stripe {
+  border-top: 1px solid #e5e5e5;
+  position: absolute;
+  top: 4px;
+  width: 100%;
+}
+
+.carousel__current-position {
+  border-top: 1px solid #000;
+  position: absolute;
+  top: 4px;
+  width: 20%;
 }
 /*# sourceMappingURL=styles.css.map */

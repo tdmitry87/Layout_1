@@ -3,7 +3,7 @@ window.onload = function () {
     /*--------------------------------------------------------
     Корректировка ширины элементов карусели
     
-    Работает при видимой ширине экрана не менее 1140px, далее надо менять представление в медиа
+    Нужна, чтобы учесть наличие/отсутствие полосы вертикальной прокрутки
     --------------------------------------------------------*/
     var carousel__items = document.querySelectorAll(".carousel__item");
 
@@ -22,6 +22,8 @@ window.onload = function () {
     }
     changeCarouselItemWidth();
 
-    window.onresize = changeCarouselItemWidth;
+    window.addEventListener("resize", changeCarouselItemWidth); 
+
+
 }
  
