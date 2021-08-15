@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-----------------------------------------------------------
 LOAD FONTS
 ------------------------------------------------------------*/
@@ -55,6 +56,26 @@ ul, ol {
 li {
   text-decoration: none;
   list-style: none;
+}
+
+/*h1 {
+    font-size: 3.6rem;
+    //line-height: 52.2px;
+    margin: 0;
+    padding: 0;
+    
+}*/
+h3 {
+  font-size: 1.6rem;
+  line-height: 1.35;
+}
+
+p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.35;
+  margin: 0;
+  padding: 0;
 }
 
 /*------------------------------------------------------------
@@ -217,6 +238,7 @@ PLAIN CAROUSEL
   background-color: transparent;
   color: #fff;
   font-weight: 400;
+  height: 100%;
 }
 
 .carousel__content-header {
@@ -239,7 +261,7 @@ PLAIN CAROUSEL
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 60.1px 0 120.5px;
+  margin: 60.1px 0 0;
 }
 
 .carousel__control-panel {
@@ -272,5 +294,152 @@ PLAIN CAROUSEL
   position: absolute;
   top: 4px;
   width: 20%;
+}
+
+/*-------------------------------------------------------------------------
+О РЕСТОРАНЕ
+-------------------------------------------------------------------------*/
+.restaurant {
+  display: grid;
+  grid-template-columns: 1fr repeat(12, 65px) 1fr;
+  gap: 30px;
+  grid-template-rows: auto auto auto auto;
+}
+
+.restaurant__header {
+  grid-column: 6/10;
+  grid-row: 1/2;
+}
+
+.restaurant__header-header1 {
+  text-align: center;
+  font-size: 3.6rem;
+  font-weight: 300;
+  line-height: 1.45;
+  letter-spacing: 1.8px;
+  color: #222222;
+  margin: 112px 0 8px 0;
+  padding: 0;
+}
+
+.restaurant__header-paragraph-icon {
+  text-align: center;
+  line-height: 0;
+}
+
+.restaurant__header .restaurant__location-icon {
+  display: inline-block;
+  width: 46px;
+  height: 30px;
+}
+
+.restaurant__header-paragraph {
+  margin: 10px 0 30px;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.27px;
+  text-align: center;
+}
+
+.restaurant__photo {
+  grid-column: 3/13;
+  grid-row: 2/3;
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+.restaurant__photo img {
+  display: block;
+  width: calc(100% + 60px);
+  transform: translateX(-30px);
+}
+
+.restaurant__welcome {
+  grid-column: 3/7;
+  grid-row: 3/5;
+}
+
+.restaurant__welcome p {
+  color: #616161;
+}
+
+.restaurant__welcome p:nth-child(2) {
+  white-space: pre-line;
+}
+
+.restaurant__location {
+  grid-column: 8/11;
+  grid-row: 3/4;
+}
+
+.restaurant__location h3 {
+  vertical-align: baseline;
+  margin: 0 0 2rem;
+}
+
+.restaurant__location p {
+  color: #616161;
+}
+
+.restaurant__location img {
+  height: 3rem;
+  line-height: 0px;
+}
+
+.restaurant__interior {
+  grid-column: 11/14;
+  grid-row: 3/4;
+}
+
+.restaurant__interior h3 {
+  vertical-align: baseline;
+  margin: 1rem 0 2rem;
+}
+
+.restaurant__interior p {
+  color: #616161;
+}
+
+.restaurant__interior img {
+  height: 2rem;
+  line-height: 0px;
+}
+
+.restaurant__technologies {
+  grid-column: 8/11;
+  grid-row: 4/5;
+}
+
+.restaurant__technologies h3 {
+  vertical-align: baseline;
+  margin: 3.9rem 0 2rem;
+}
+
+.restaurant__technologies p {
+  color: #616161;
+}
+
+.restaurant__technologies img {
+  height: 3.1rem;
+  line-height: 0px;
+}
+
+.restaurant__equipment {
+  grid-column: 11/14;
+  grid-row: 4/5;
+}
+
+.restaurant__equipment h3 {
+  vertical-align: baseline;
+  margin: 3.3rem 0 2rem;
+}
+
+.restaurant__equipment p {
+  color: #616161;
+}
+
+.restaurant__equipment img {
+  height: 3.7rem;
+  line-height: 0px;
 }
 /*# sourceMappingURL=styles.css.map */
